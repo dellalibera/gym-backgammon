@@ -24,7 +24,7 @@
 
 ---
 ## <a name="gym_backgammon"></a>gym-backgammon
-The backgammon game is a 2-player game, that involves both the movement of the checkers and also the roll of the dice. The goal of each player is to move all of his checkers off the board.  
+The backgammon game is a 2-player game that involves both the movement of the checkers and also the roll of the dice. The goal of each player is to move all of his checkers off the board.  
 
 This repository contains a Backgammon game implementation in OpenAI Gym.   
 Given the current state of the board, a dice roll, and the current player, it computes all the legal actions/moves (iteratively) that the current player can execute.  The legal actions are generated in a such a way that they uses the highest number of dice (if possible) for that state and player.  
@@ -39,7 +39,7 @@ pip install -e .
 
 ---
 ## <a name="env"></a>Environment
-The encoding used to represent the state, is inspired by the one used by Gerald Tesauro[1].
+The encoding used to represent the state is inspired by the one used by Gerald Tesauro[1].
 ### <a name="observation"></a>Observation
 Type: Box(198)
 
@@ -102,7 +102,7 @@ Encoding of the current player:
 | BLACK   | [0.0, 1.0] |
 
 ### <a name="actions"></a>Actions
-The valid actions that an agent can execute, depend on the current state and the dice roll. So, there is no fixed shape for the action space.  
+The valid actions that an agent can execute depend on the current state and the dice roll. So, there is no fixed shape for the action space.  
 
 ### <a name="reward"></a>Reward
 +1 if player WHITE wins, and 0 if player BLACK wins
@@ -165,8 +165,7 @@ Each action is a tuple of tuples, in the form `((source, target), (source, targe
 Each tuple represents a move in the form `(source, target)` 
 
 #### NOTE:
-At the moment, among all the possible valid actions there are no the actions to ask for doubling and accept/reject a doubling.
-
+The actions of asking a double and accept/reject a double are not available.  
 
 Given the following configuration ([starting position](#starting_position), `BLACK` player in turn, `roll = (1, 3)`):
 ```
@@ -218,7 +217,7 @@ Legal Actions:
 The previous description refers to `backgammon-v0`.
 
 ### `backgammon-pixel-v0`
-The state is represented by the pixel of the screen, that is a `(96, 96, 3)` feature vector.    
+The state is represented by `(96, 96, 3)` feature vector.    
 It is the only difference w.r.t `backgammon-v0`.
 
 An example of the board representation:

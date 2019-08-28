@@ -355,7 +355,7 @@ class Backgammon:
         """
         plays = set()
         reverse = player != WHITE
-        r1, r2 = sorted(roll, reverse=reverse)  # for WHITE player the roll are negative (i.e (-3,-2))
+        r1, r2 = sorted(roll, reverse=reverse)  # for WHITE player the rolls are negative (i.e (-3,-2))
 
         active_positions = set(self.players_positions[player])
         home_positions = set(self.players_home_positions[player])

@@ -27,7 +27,7 @@
 The backgammon game is a 2-player game that involves both the movement of the checkers and also the roll of the dice. The goal of each player is to move all of his checkers off the board.  
 
 This repository contains a Backgammon game implementation in OpenAI Gym.   
-Given the current state of the board, a dice roll, and the current player, it computes all the legal actions/moves (iteratively) that the current player can execute.  The legal actions are generated in a such a way that they uses the highest number of dice (if possible) for that state and player.  
+Given the current state of the board, a roll of the dice, and the current player, it computes all the legal actions/moves (iteratively) that the current player can execute.  The legal actions are generated in a such a way that they uses the highest number of dice (if possible) for that state and player.  
 
 ---
 ## <a name="installation"></a>Installation
@@ -102,7 +102,7 @@ Encoding of the current player:
 | BLACK   | [0.0, 1.0] |
 
 ### <a name="actions"></a>Actions
-The valid actions that an agent can execute depend on the current state and the dice roll. So, there is no fixed shape for the action space.  
+The valid actions that an agent can execute depend on the current state and the roll of the dice. So, there is no fixed shape for the action space.  
 
 ### <a name="reward"></a>Reward
 +1 if player WHITE wins, and 0 if player BLACK wins
@@ -135,7 +135,7 @@ All the episodes/games start in the same [starting position](#starting_position)
 ### <a name="reset"></a>Reset
 The method `reset()` returns:
 - the player that will move first (`0` for the `WHITE` player, `1` for the `BLACK` player) 
-- the first dice roll, a tuple with the dice rolled, i.e `(1,3)` for the `BLACK` player or `(-1, -3)` for the `WHITE` player
+- the first roll of the dice, a tuple with the dice rolled, i.e `(1,3)` for the `BLACK` player or `(-1, -3)` for the `WHITE` player
 - observation features from the starting position
 
 
@@ -214,7 +214,7 @@ Legal Actions:
 
 ## <a name="versions"></a>Backgammon Versions 
 ### `backgammon-v0`
-The previous description refers to `backgammon-v0`.
+The above description refers to `backgammon-v0`.
 
 ### `backgammon-pixel-v0`
 The state is represented by `(96, 96, 3)` feature vector.    

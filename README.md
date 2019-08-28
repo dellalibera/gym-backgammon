@@ -221,7 +221,7 @@ The previous description refers to `backgammon-v0`.
 The state is represented by the pixel of the screen, that is a `(96, 96, 3)` feature vector.    
 It is the only difference w.r.t `backgammon-v0`.
 
-Here is displayed an example of the board representation:
+An example of the board representation:
 <p align="center">
    <img alt="raw_pixel" title="raw_pixel" src="./raw_pixel.png" width="150">
 </p>

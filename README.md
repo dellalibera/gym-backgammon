@@ -228,7 +228,7 @@ An example of the board representation:
 
 ---
 ## <a name="useful_links"></a>Useful links and related works
-- [1][Implementaion Details TD-Gammon](http://www.scholarpedia.org/article/User:Gerald_Tesauro/Proposed/Td-gammon)
+- [1][Implementation Details TD-Gammon](http://www.scholarpedia.org/article/User:Gerald_Tesauro/Proposed/Td-gammon)
 - [2][Practical Issues in Temporal Difference Learning](https://papers.nips.cc/paper/465-practical-issues-in-temporal-difference-learning.pdf)
 <br><br>   
 - Rules of Backgammon:

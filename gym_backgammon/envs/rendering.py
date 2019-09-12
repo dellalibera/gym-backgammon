@@ -4,9 +4,10 @@ import numpy as np
 from collections import namedtuple
 from gym_backgammon.envs.backgammon import WHITE, BLACK, NUM_POINTS
 import os
-
+import platform
 Coords = namedtuple('Coords', ['x', 'y'])
 
+SCALING = 2 if platform.system() == 'Darwin' else 1
 
 class Viewer(object):
     def __init__(self, width, height):
@@ -141,7 +142,7 @@ class Viewer(object):
             arr = arr.reshape((state_h, state_w, 4))
             arr = arr[::-1, :, 0:3]
 
-        gl.glViewport(0, 0, 2 * self.window.width, 2 * self.window.height)
+        gl.glViewport(0, 0, SCALING * self.window.width, SCALING * self.window.height)
         pyglet.sprite.Sprite(img=self.empty_board_image, batch=None).draw()
         batch.draw()
 

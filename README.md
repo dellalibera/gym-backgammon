@@ -34,7 +34,7 @@ Given the current state of the board, a roll of the dice, and the current player
 ```
 git clone https://github.com/dellalibera/gym-backgammon.git
 cd gym-backgammon
-pip install -e .
+pip3 install -e .
 ```
 
 ---
@@ -151,7 +151,7 @@ If `render(mode = 'rgb_array')` or `render(mode = 'state_pixels')` are selected,
 To run a simple example (both agents - `WHITE` and `BLACK` select an action randomly):
 ```
 cd gym-backgammon/examples/
-python play_random_agent.py
+python3 play_random_agent.py
 ```
 #### <a name="valid_actions"></a>Valid actions
 An internal variable, `current player` is used to keep track of the player in turn (it represents the color of the player).   

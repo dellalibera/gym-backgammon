@@ -588,6 +588,8 @@ class Backgammon:
                                 plays.add((move, (s, t1)))
                                 if self.board[s1][0] >= 1:
                                     plays.add((move, move, (s, t1)))
+                                    plays.update([(move, move, (s, t1), single) for single in single_moves if single != (s, t1)])
+
                                 if self.board[s1][0] >= 2:
                                     plays.add((move, move, move, (s, t1)))
                             else:

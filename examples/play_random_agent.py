@@ -5,8 +5,8 @@ import random
 import numpy as np
 from gym_backgammon.envs.backgammon import WHITE, BLACK, COLORS, TOKEN
 
-env = gym.make('gym_backgammon:backgammon-v0')
-# env = gym.make('gym_backgammon:backgammon-pixel-v0')
+# env = gym.make('gym_backgammon:backgammon-v0', disable_env_checker=True)
+env = gym.make('gym_backgammon:backgammon-pixel-v0', disable_env_checker=True)
 
 random.seed(0)
 np.random.seed(0)
